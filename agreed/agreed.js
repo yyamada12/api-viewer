@@ -8,17 +8,22 @@ module.exports = [
       },
     },
     response: {
-      body: [
-        {
-          message: "message1 {:id} {:someQueryStrings}",
-        },
-        {
-          message: "message2 {:id} {:someQueryStrings}",
-        },
-        {
-          message: "message3 {:id} {:someQueryStrings}",
-        },
-      ],
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: {
+        messages: [
+          {
+            message: "message1 {:id} {:someQueryStrings}",
+          },
+          {
+            message: "message2 {:id} {:someQueryStrings}",
+          },
+          {
+            message: "message3 {:id} {:someQueryStrings}",
+          },
+        ],
+      },
     },
   },
 ];
